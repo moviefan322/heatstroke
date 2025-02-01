@@ -12,3 +12,7 @@ a {
 .tourney-font {
   font-family: var(--font-tourney);
 }
+
+.courier-font {
+  font-family: var(--font-courier-prime);
+}
