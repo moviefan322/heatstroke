@@ -2,6 +2,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--font-space-mono);
+}
+
+button {
+  background-color: inherit;
+  border: none;
 }
 
 a {
@@ -15,4 +21,30 @@ a {
 
 .courier-font {
   font-family: var(--font-courier-prime);
+}
+
+.space-font {
+  font-family: var(--font-space-mono);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  margin-bottom: 50px;
+  align-items: center;
+  margin: auto;
+}
+
+/* media query bigger than mobile */
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    border: red 1px solid;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 5rem;
+    align-items: center;
+  }
 }
