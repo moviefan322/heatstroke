@@ -7,6 +7,7 @@ export default function Menu() {
   const [showDropdown, setShowDropdown] = useState(false);
   return (
     <>
+      <div className="navbg" />
       <nav>
         <Link href="/">
           <span className="tourney-font">Heatstroke</span>
@@ -58,7 +59,7 @@ export default function Menu() {
           align-items: center;
           top: 80px;
           background-color: rgba(0, 0, 0, 0.5);
-          width: 100vw;
+          width: 100%;
           color: white;
           font-size: 20px;
           overflow: hidden;
@@ -66,14 +67,22 @@ export default function Menu() {
           transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
         .dropdown.show {
-          height: 192px;
+          height: 193px;
           opacity: 1;
         }
         .dropdown-item {
           width: 100%;
           text-align: center;
           padding: 1rem;
-          border: 1px solid white;
+          border-bottom: 1px solid white;
+        }
+        .navbg {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          height: 80px;
+          background-color: rgba(255, 255, 255, 0.8);
+          z-index: 1;
         }
         nav {
           position: fixed;
@@ -84,13 +93,13 @@ export default function Menu() {
           padding: 1rem;
           background-color: rgba(0, 0, 0, 0.5);
           color: white;
-          width: 100vw;
+          width: 100%;
           height: 80px;
+          z-index: 2;
         }
         ul {
           display: none;
         }
-
         li {
           margin-left: 1rem;
           font-size: 20px;
@@ -125,7 +134,8 @@ export default function Menu() {
             padding: 1rem;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            width: 100vw;
+            padding-left: 5rem;
+            padding-right: 5rem;
           }
           .container {
             display: flex;
@@ -141,6 +151,9 @@ export default function Menu() {
             justify-content: space-around;
             width: 100%;
             align-items: center;
+          }
+          .toggle-mobile-menu {
+            display: none;
           }
         }
       `}</style>
